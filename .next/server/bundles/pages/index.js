@@ -72,16 +72,16 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
-/***/ "./App.js":
+/***/ "./containers/App/App.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("react");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__containers_Header__ = __webpack_require__("./containers/Header/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__containers_ContentWrapper__ = __webpack_require__("./containers/ContentWrapper/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__containers_Footer__ = __webpack_require__("./containers/Footer/index.js");
-var _jsxFileName = "C:\\my apps\\Next.js\\App.js";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Header__ = __webpack_require__("./containers/Header/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ContentWrapper__ = __webpack_require__("./containers/ContentWrapper/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Footer__ = __webpack_require__("./containers/Footer/index.js");
+var _jsxFileName = "C:\\my apps\\Next.js\\containers\\App\\App.js";
 
 
 
@@ -93,17 +93,17 @@ var App = function App() {
       fileName: _jsxFileName,
       lineNumber: 6
     }
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__containers_Header__["a" /* default */], {
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__Header__["a" /* default */], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7
     }
-  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__containers_ContentWrapper__["a" /* default */], {
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__ContentWrapper__["a" /* default */], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8
     }
-  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__containers_Footer__["a" /* default */], {
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__Footer__["a" /* default */], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
@@ -112,6 +112,16 @@ var App = function App() {
 };
 
 /* harmony default export */ __webpack_exports__["a"] = (App);
+
+/***/ }),
+
+/***/ "./containers/App/index.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__App__ = __webpack_require__("./containers/App/App.js");
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__App__["a"]; });
+
 
 /***/ }),
 
@@ -344,7 +354,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__("react-redux");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_redux__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__store__ = __webpack_require__("./store.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__App__ = __webpack_require__("./App.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__containers_App__ = __webpack_require__("./containers/App/index.js");
 var _jsxFileName = "C:\\my apps\\Next.js\\pages\\index.js";
 
 
@@ -356,17 +366,78 @@ var Index = function Index() {
     store: __WEBPACK_IMPORTED_MODULE_2__store__["a" /* default */],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 7
     }
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__App__["a" /* default */], {
+  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__containers_App__["a" /* default */], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 8
     }
   }));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Index);
+
+/***/ }),
+
+/***/ "./reducers/globalReducer/globalReducer.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var initialState = {
+  userProfile: {
+    username: "",
+    accessToken: ""
+  }
+};
+
+var global = function global() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+
+  switch (action.type) {
+    default:
+      return state;
+  }
+};
+
+/* harmony default export */ __webpack_exports__["a"] = (global);
+
+/***/ }),
+
+/***/ "./reducers/globalReducer/index.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__globalReducer__ = __webpack_require__("./reducers/globalReducer/globalReducer.js");
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__globalReducer__["a"]; });
+
+
+/***/ }),
+
+/***/ "./reducers/rootReducer/index.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__rootReducer__ = __webpack_require__("./reducers/rootReducer/rootReducer.js");
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__rootReducer__["a"]; });
+
+
+/***/ }),
+
+/***/ "./reducers/rootReducer/rootReducer.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__("redux");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_redux__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__globalReducer__ = __webpack_require__("./reducers/globalReducer/index.js");
+
+
+var rootReducer = Object(__WEBPACK_IMPORTED_MODULE_0_redux__["combineReducers"])({
+  global: __WEBPACK_IMPORTED_MODULE_1__globalReducer__["a" /* default */]
+});
+/* harmony default export */ __webpack_exports__["a"] = (rootReducer);
 
 /***/ }),
 
@@ -378,22 +449,11 @@ var Index = function Index() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_redux__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_redux_devtools_extension__ = __webpack_require__("redux-devtools-extension");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_redux_devtools_extension___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_redux_devtools_extension__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__reducers_rootReducer__ = __webpack_require__("./reducers/rootReducer/index.js");
 
 
 
-var rootReducer = function rootReducer() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {
-    username: ""
-  };
-  var action = arguments.length > 1 ? arguments[1] : undefined;
-
-  switch (action.type) {
-    default:
-      return state;
-  }
-};
-
-var store = Object(__WEBPACK_IMPORTED_MODULE_0_redux__["createStore"])(rootReducer, Object(__WEBPACK_IMPORTED_MODULE_1_redux_devtools_extension__["composeWithDevTools"])());
+var store = Object(__WEBPACK_IMPORTED_MODULE_0_redux__["createStore"])(__WEBPACK_IMPORTED_MODULE_2__reducers_rootReducer__["a" /* default */], Object(__WEBPACK_IMPORTED_MODULE_1_redux_devtools_extension__["composeWithDevTools"])());
 /* harmony default export */ __webpack_exports__["a"] = (store);
 
 /***/ }),
