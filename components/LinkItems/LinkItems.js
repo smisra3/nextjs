@@ -1,25 +1,23 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
+import styles from "./styles";
 
 const LinkItems = props => {
   const navItemsList = props.items.map((element, index) => (
-    <li
-      className={
-        props.listItemsWrapper ? props.listItemsWrapper.listItems.class : ""
-      }
-      key={index}
-    >
-      <Link
-        to={element.href}
-        className={element.class || ""}
-        title={element.title}
-      >
-        {element.text}
+    <li className={`nav-item`} key={index}>
+      <Link href={element.href}>
+        <a
+          className={`${element.class} nav-link` || "nav-link"}
+          title={element.title}
+        >
+          {element.text}
+        </a>
       </Link>
     </li>
   ));
   return (
-    <ul className={props.listItemsWrapper ? props.listItemsWrapper.class : ""}>
+    <ul className={`nav`}>
       {navItemsList}
+      {styles}
     </ul>
   );
 };

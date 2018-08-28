@@ -3,14 +3,12 @@ import React, { Component } from "react";
 
 import styles from "./styles";
 import AppCarousel from "../../components/AppCarousel";
-import ProductCard from "../../components/ProductCard";
 
-class ContentWrapper extends Component {
+class Home extends Component {
   render() {
     return (
-      <div className="content-wrapper">
+      <div className="home">
         <AppCarousel />
-        <ProductCard />
         {styles}
       </div>
     );
@@ -19,4 +17,4 @@ class ContentWrapper extends Component {
 
 const mapStateToProps = state => ({ state });
 
-export default connect(mapStateToProps)(ContentWrapper);
+export default connect(mapStateToProps)(Home);
